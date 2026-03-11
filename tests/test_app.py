@@ -46,6 +46,19 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Google Cloud Architect', response.data)
 
+    def test_aws_cloud_architect_course(self):
+        response = self.app.get('/course/6')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'AWS Cloud Architect', response.data)
+        self.assertIn(b'Sandeep Arora', response.data)
+        self.assertIn(b'8 weeks', response.data)
+        self.assertIn(b'AWS Certified Solutions Architect Exam Prep', response.data)
+
+    def test_index_includes_aws_cloud_course(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'AWS Cloud Architect', response.data)
+
     # Contact Page Tests
     def test_contact_page_loads(self):
         """Test that contact page returns 200 status"""
