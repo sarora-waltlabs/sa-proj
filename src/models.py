@@ -46,4 +46,32 @@ courses = [
             "Google Cloud Professional Architect Exam Prep",
         ]
     ),
+    Course(
+        "AWS Cloud Architect",
+        "Prepare for the AWS Certified Solutions Architect certification. Learn to design, deploy, and manage scalable, highly available, and fault-tolerant systems on Amazon Web Services. This course covers core AWS services, architecture best practices, security, cost optimization, and real-world scenarios to get you ready for enterprise-grade cloud solutions.",
+        "Sandeep Arora",
+        "8 weeks",
+        [
+            "Cloud Computing Fundamentals",
+            "AWS Global Infrastructure Overview",
+            "EC2 and Compute Services",
+            "S3 and Object Storage",
+            "Virtual Private Cloud (VPC) Networking",
+            "Identity and Access Management (IAM)",
+            "RDS and Relational Databases",
+            "DynamoDB and NoSQL Databases",
+            "Elastic Load Balancing and Auto Scaling",
+            "Amazon ECS and EKS (Container Services)",
+            "AWS Lambda and Serverless Architecture",
+            "CI/CD with CodePipeline and CodeDeploy",
+            "CloudWatch Monitoring and Logging",
+            "Security and Compliance on AWS",
+            "Cost Management and Budget Optimization",
+            "Cloud Architecture Patterns and Best Practices",
+            "Disaster Recovery and High Availability",
+            "Cloud Migration Strategies",
+            "SQS, SNS, and Event-Driven Architecture",
+            "AWS Certified Solutions Architect Exam Prep",
+        ]
+    ),
 ]
