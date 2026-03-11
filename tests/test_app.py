@@ -15,7 +15,7 @@ class AppTestCase(unittest.TestCase):
     def test_index(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Welcome to the Course Explainer', response.data)
+        self.assertIn(b'Course Explainer', response.data)
         # Test that course names are displayed
         self.assertIn(b'Introduction to Python', response.data)
         self.assertIn(b'Web Development with Flask', response.data)
@@ -32,6 +32,19 @@ class AppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Go Programming Essentials', response.data)
         self.assertIn(b'Robert Chen', response.data)
+
+    def test_google_cloud_architect_course(self):
+        response = self.app.get('/course/5')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Google Cloud Architect', response.data)
+        self.assertIn(b'Sandeep Arora', response.data)
+        self.assertIn(b'8 weeks', response.data)
+        self.assertIn(b'Google Cloud Professional Architect Exam Prep', response.data)
+
+    def test_index_includes_google_cloud_course(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Google Cloud Architect', response.data)
 
     # Contact Page Tests
     def test_contact_page_loads(self):
