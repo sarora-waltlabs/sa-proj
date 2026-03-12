@@ -2,87 +2,66 @@
 * { box-sizing: border-box; }
 html,body { margin:0; padding:0; min-height:100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color:#1e293b; background:#fafbfc; }
 
-/* CSS Variables - Design System */
+/* CSS Variables - Premium Dark Navy & Gold Design System */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1e40af;
-  --primary-light: #dbeafe;
-  --bg-primary: #fafbfc;
-  --bg-secondary: #f1f5f9;
-  --bg-accent: #e0f2fe;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --border: #e2e8f0;
+  --primary: #c9a84c;
+  --primary-dark: #a67c2e;
+  --primary-light: #f5e9c8;
+  --bg-primary: #f8f7f4;
+  --bg-secondary: #f0ede6;
+  --bg-accent: #fdf6e3;
+  --text-primary: #1a1a2e;
+  --text-secondary: #5a5a7a;
+  --border: #e0d9cc;
   --success: #10b981;
   --error: #ef4444;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 26, 46, 0.12);
+  --shadow-lg: 0 10px 30px rgba(26, 26, 46, 0.18);
+  --navy: #0d1b2a;
+  --navy-mid: #16213e;
+  --gold: #c9a84c;
+  --gold-light: #f5e9c8;
 }
 
 /* header */
-.site-header { background:#37474f; color:#fff; }
+.site-header { background: linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 100%); color:#fff; border-bottom: 2px solid var(--gold); }
 .header-inner { max-width:1000px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-.site-title { margin:0; font-size:28px; }
+.site-title { margin:0; font-size:28px; color: var(--gold); letter-spacing: 0.5px; }
 
 /* nav */
 .main-nav { list-style:none; margin:0; padding:0; display:flex; gap:14px; align-items:center; }
 .main-nav li { margin:0; }
-.main-nav a { color:#dfeeff; text-decoration:none; padding:6px 8px; border-radius:4px; font-weight:600; }
-.main-nav a:hover { background:rgba(255,255,255,0.06); text-decoration:underline; }
+.main-nav a { color:#e8d5a3; text-decoration:none; padding:6px 8px; border-radius:4px; font-weight:600; transition: color 0.2s ease; }
+.main-nav a:hover { color: var(--gold); text-decoration:none; }
 
 /* page container/content */
-.container { max-width:1000px; margin:28px auto; padding:32px 24px; background:#fff; border-radius:6px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
-h1 { font-size:32px; margin-top:0; }
+.container { max-width:1000px; margin:28px auto; padding:32px 24px; background:#fff; border-radius:8px; box-shadow:var(--shadow-md); border: 1px solid var(--border); }
+h1 { font-size:32px; margin-top:0; color: var(--text-primary); }
 p { line-height:1.6; color:#444; }
 
 /* list styling for course links */
 .container ul { padding-left:20px; }
-.container ul li a { color:#2a6fb6; }
+.container ul li a { color: var(--primary-dark); }
 
 /* footer */
-.site-footer { max-width:1000px; margin:18px auto; padding:8px 20px; color:#555; font-size:13px; }
+.site-footer { background: linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 100%); border-top: 2px solid var(--gold); margin-top: 0; }
+.footer-inner { max-width:1000px; margin:0 auto; padding:16px 20px; color:#e8d5a3; font-size:13px; text-align: center; }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    background-color: var(--bg-primary);
 }
 
 .course {
     background: #ffffff;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--gold);
 }
 
 /* Contact Page Styles */
@@ -222,11 +201,12 @@ h1 {
 
 /* Home Page - Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a237e 100%);
     color: white;
     padding: 80px 20px;
     text-align: center;
     margin-bottom: 60px;
+    border-bottom: 3px solid var(--gold);
 }
 
 .hero-content {
@@ -250,15 +230,16 @@ h1 {
 
 .hero-cta {
     display: inline-block;
-    background: white;
-    color: var(--primary);
+    background: var(--gold);
+    color: var(--navy);
     padding: 14px 32px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 16px rgba(201, 168, 76, 0.4);
+    letter-spacing: 0.3px;
 }
 
 .hero-cta:hover {
@@ -312,7 +293,7 @@ h1 {
 .course-card-header {
     padding: 24px;
     border-bottom: 1px solid var(--border);
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
 }
 
 .course-title {
@@ -323,13 +304,13 @@ h1 {
 }
 
 .course-title a {
-    color: var(--primary);
+    color: var(--gold);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .course-title a:hover {
-    color: var(--primary-dark);
+    color: #f5e9c8;
 }
 
 .course-card-body {
@@ -378,18 +359,22 @@ h1 {
 
 .course-link {
     display: inline-block;
-    color: var(--primary);
+    color: var(--navy);
+    background: var(--gold);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border-radius: 6px;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
 }
 
 .course-link:hover {
-    background: var(--primary-light);
-    color: var(--primary-dark);
+    background: var(--primary-dark);
+    color: white;
+    box-shadow: 0 4px 12px rgba(166, 124, 46, 0.4);
+    transform: translateY(-1px);
 }
 
 /* Social Media Styles */
@@ -397,9 +382,9 @@ h1 {
     font-size: 24px;
     font-weight: 600;
     margin: 0 0 16px 0;
-    border-bottom: 2px solid #37474f;
+    border-bottom: 2px solid var(--gold);
     padding-bottom: 8px;
-    color: #222;
+    color: var(--text-primary);
 }
 
 .social-links {
