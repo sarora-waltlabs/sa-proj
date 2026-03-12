@@ -48,8 +48,13 @@ Both require `CLAUDE_CODE_OAUTH_TOKEN` set as a repository secret.
 
 ## Development Workflow
 
-1. Add unit tests for any changes and verify they pass before committing.
-2. **After implementing any feature, verify with Playwright (MANDATORY):**
+### Add Unit Tests
+- Whenever you add any changed add unit tests and run to make sure the tests passes
+
+### Verify Chnages with Playwright (MANDATORY)
+
+**After implementing any feature, verify with Playwright (MANDATORY):**
    - Start the app: `python3 src/app.py`
    - Use the Playwright MCP tool to navigate to `http://127.0.0.1:5000`
    - Take a screenshot and save it to `test-output/` with a descriptive filename (e.g., `feature-name-verification-YYYY-MM-DD.png`)
+   - Create a PR with details of the changes and share the link with me to review and merge
