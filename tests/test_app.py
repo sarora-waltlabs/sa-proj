@@ -142,5 +142,26 @@ class AppTestCase(unittest.TestCase):
         self.assertIn(b'Please enter a valid email address', response.data)
         self.assertIn(b'Please enter your address (minimum 10 characters)', response.data)
 
+    # About Page Tests
+    def test_about_page_loads(self):
+        """Test that about page returns 200 status"""
+        response = self.app.get('/about')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'About Course Explainer', response.data)
+
+    def test_about_page_content(self):
+        """Test that about page contains key content sections"""
+        response = self.app.get('/about')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Our Mission', response.data)
+        self.assertIn(b'What We Stand For', response.data)
+        self.assertIn(b'Browse Courses', response.data)
+
+    def test_about_nav_link_present(self):
+        """Test that About nav link appears on all pages"""
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'/about', response.data)
+
 if __name__ == '__main__':
     unittest.main()
