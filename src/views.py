@@ -50,3 +50,6 @@ def contact():
 
     # GET request - render empty form
     return render_template('contact.html')
+
+def about():
+    return render_template('about.html')

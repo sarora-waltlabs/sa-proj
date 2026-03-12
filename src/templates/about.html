@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}About — Course Explainer{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+  <h2 class="about-hero__title">About Course Explainer</h2>
+  <p class="about-hero__subtitle">Empowering learners with clear, practical, and expert-led courses.</p>
+</section>
+
+<section class="about-mission">
+  <h3 class="about-mission__heading">Our Mission</h3>
+  <p class="about-mission__text">
+    Course Explainer was built to make high-quality technical education accessible to everyone.
+    Whether you're just starting out or leveling up your career, our curated courses provide
+    the practical skills you need to succeed in today's fast-moving tech landscape.
+  </p>
+</section>
+
+<section class="about-values">
+  <h3 class="about-values__heading">What We Stand For</h3>
+  <div class="about-values__grid">
+    <div class="value-card">
+      <div class="value-card__icon">&#127891;</div>
+      <h4 class="value-card__title">Expert Instruction</h4>
+      <p class="value-card__text">Courses taught by industry practitioners with real-world experience.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-card__icon">&#128218;</div>
+      <h4 class="value-card__title">Practical Focus</h4>
+      <p class="value-card__text">Hands-on projects and exercises that prepare you for the job market.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-card__icon">&#127760;</div>
+      <h4 class="value-card__title">Accessible Learning</h4>
+      <p class="value-card__text">Self-paced courses designed to fit your schedule and learning style.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-card__icon">&#129351;</div>
+      <h4 class="value-card__title">Certification Ready</h4>
+      <p class="value-card__text">Targeted prep for industry certifications from AWS, Google Cloud, and more.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta">
+  <p class="about-cta__text">Ready to start learning?</p>
+  <div class="about-cta__actions">
+    <a href="{{ url_for('index') }}" class="btn btn--primary">Browse Courses</a>
+    <a href="{{ url_for('contact') }}" class="btn btn--secondary">Get in Touch</a>
+  </div>
+</section>
+{% endblock %}
